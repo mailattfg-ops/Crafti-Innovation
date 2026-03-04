@@ -1,0 +1,55 @@
+"use client";
+
+import { expertiseData } from "@/data/homeData";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { CraftiCard } from "@/components/ui/CraftiCard";
+import { CheckCircle2 } from "lucide-react";
+
+export function Expertise() {
+    return (
+        <section className="py-16 md:py-24 lg:py-32 xl:py-16 bg-white relative overflow-hidden">
+            {/* Subtle Background Decoration */}
+            <div className="absolute top-1/2 left-0 w-64 h-64 bg-brand/5 blur-[100px] rounded-full -translate-y-1/2" />
+
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-stretch">
+                    <div className="space-y-12">
+                        <SectionHeader
+                            title="Our Craft"
+                            subtitle="Exceptional artistry meets meticulous production standards."
+                            align="left"
+                        />
+                        <div className="grid gap-10">
+                            {expertiseData.map((item, idx) => (
+                                <CraftiCard key={idx} accentColor="bg-transparent" rotate={idx % 2 === 0 ? "rotate-1" : "-rotate-1"} padding="p-8">
+                                    <div className="flex gap-6 items-start">
+                                        <div className="h-12 w-12 bg-slate-900 rounded-xl flex items-center justify-center text-white shrink-0">
+                                            <CheckCircle2 className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-black text-xl text-slate-900 mb-2 leading-tight uppercase tracking-tight">{item.title}</h4>
+                                            <p className="text-slate-600 text-base italic leading-relaxed">"{item.description}"</p>
+                                        </div>
+                                    </div>
+                                </CraftiCard>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="relative lg:pl-10 h-full">
+                        <CraftiCard accentColor="bg-brand" rotate="rotate-6" padding="p-16">
+                            <div className="flex flex-col items-center justify-center h-full text-center py-10">
+                                <p className="text-8xl font-black text-brand mb-6 italic">25+</p>
+                                <div className="h-1 w-20 bg-slate-900 mx-auto mb-6" />
+                                <p className="text-slate-900 font-black uppercase tracking-[0.2em] text-xl leading-tight">
+                                    Years of<br />
+                                    <span className="text-brand">Artistic</span><br />
+                                    Legacy
+                                </p>
+                            </div>
+                        </CraftiCard>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

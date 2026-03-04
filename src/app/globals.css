@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #3E4F42;
+  --color-brand-light: #F5F5F0;
+  --color-brand-dark: #2C3A31;
+  --color-brand-accent: #B05B3B;
+  --color-brand-muted: #E8EADF;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 8s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+:root {
+  --background: #F5F5F0;
+  --foreground: #3E4F42;
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(62, 79, 66, 0.1);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(62, 79, 66, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--color-brand-dark), var(--color-brand-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Editorial Style Utilities */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .editorial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.editorial-quote {
+  font-size: 8rem;
+  line-height: 1;
+  font-family: serif;
+  opacity: 0.8;
+  color: var(--color-brand-accent);
+  margin-bottom: -1.5rem;
+  display: block;
+}
+
+.editorial-heading {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: var(--color-brand-accent);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.editorial-bg-ivory {
+  background-color: var(--color-brand-light);
+}
+
+.editorial-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: stretch;
+}
