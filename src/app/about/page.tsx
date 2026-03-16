@@ -147,7 +147,7 @@ export default function AboutPage() {
                                             src={ach.image}
                                             alt={ach.title}
                                             fill
-                                            className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                                            className="object-cover transition-all duration-1000 group-hover:scale-110"
                                         />
                                         <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-brand-dark/0 transition-colors" />
 
