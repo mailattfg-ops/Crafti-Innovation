@@ -8,7 +8,7 @@ import { editorialSections } from "@/data/homeData";
 import { EditorialBlock } from "@/components/ui/EditorialBlock";
 
 export const metadata: Metadata = {
-    title: "Crafti Innovations | Artistry in Every Detail",
+    title: "Crafi Innovations | Artistry in Every Detail",
     description: "Premium handmade products, bespoke interiors, and unique gifts. Combining traditional craftsmanship with modern innovation.",
 };
 

@@ -11,89 +11,93 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "About Us",
-    description: "Discover the artistic legacy of Crafti Innovations. From our humble beginnings in 2003 to our global presence today, we are dedicated to excellence in every piece we craft.",
+    description: "Discover the artistic legacy of Crafi Innovations. From our humble beginnings in 2003 to our global presence today, we are dedicated to excellence in every piece we craft.",
 };
 
 export default function AboutPage() {
     return (
-        <main className="bg-white pt-20">
+        <main className="bg-white">
             {/* About Hero (Editorial) */}
-            <section className="editorial-section editorial-bg-ivory border-b border-slate-200">
-                <div className="editorial-grid w-full">
-                    <div className="p-12 md:p-24 flex flex-col justify-center">
-                        <ScrollReveal direction="down">
-                            <span className="editorial-quote">“</span>
-                            <h1 className="editorial-heading mb-8">
-                                ARTISTIC<br />
-                                <span className="text-brand-dark opacity-60">LEGACY.</span>
-                            </h1>
-                            <p className="text-2xl text-slate-700 max-w-xl leading-relaxed font-serif italic mb-12">
-                                "Our journey is defined by a relentless pursuit of perfection in every piece we craft."
-                            </p>
-                        </ScrollReveal>
-                    </div>
-                    <div className="relative min-h-[50vh] lg:min-h-full overflow-hidden">
+            <section className="hero-viewport bg-brand-light">
+                <div className="absolute inset-0 lg:relative lg:flex lg:flex-row items-stretch h-full">
+                    {/* Image Layer */}
+                    <div className="absolute inset-0 lg:relative lg:flex-1 lg:order-2 overflow-hidden">
                         <Image
                             src="/images/about_hero_new_1772613691759.png"
-                            alt="Crafti Innovations Studio"
+                            alt="Crafi Innovations Studio"
                             fill
-                            className="object-cover"
+                            className="object-cover lg:object-center"
                         />
+                        <div className="absolute inset-0 hero-image-overlay z-10" />
+                    </div>
+
+                    {/* Content Layer */}
+                    <div className="relative z-20 h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:flex-1 lg:order-1 p-6 md:p-16 lg:p-24 pt-32 lg:pt-32">
+                        <ScrollReveal direction="down">
+                            <h1 className="editorial-heading mb-6 lg:mb-6 mx-auto lg:mx-0">
+                                ARTISTIC<br />
+                                <span className="text-white lg:text-brand-dark opacity-60 lg:opacity-40">LEGACY.</span>
+                            </h1>
+                            <p className="section-desc text-white lg:text-slate-700 max-w-lg mb-8 mx-auto lg:mx-0">
+                                "A legacy of uncompromising mastery, where every silhouette and stitch is a testament to the pursuit of absolute perfection."
+                            </p>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* Dynamic Narrative Sections (Matching User Image) */}
             {companyProfile.narrative.map((item, idx) => (
-                <section key={idx} className={`relative overflow-hidden ${idx % 2 === 0 ? 'bg-white' : 'editorial-bg-ivory'} border-b border-slate-200`}>
-                    <div className={`flex flex-col lg:flex-row min-h-[80vh] ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
+                <section key={idx} className={`relative overflow-hidden ${idx % 2 === 0 ? 'bg-white' : 'editorial-bg-ivory'} border-b border-slate-200 section-padding overflow-hidden`}>
+                    <div className={`flex flex-col lg:flex-row min-h-[60vh] md:min-h-[80vh] ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                         {/* Text Content */}
-                        <div className="lg:w-1/2 p-12 md:p-24 flex flex-col justify-center relative">
+                        <div className="lg:w-1/2 p-8 md:p-16 lg:p-24 flex flex-col justify-center relative">
                             <ScrollReveal direction={idx % 2 === 0 ? "right" : "left"}>
-                                <div className="space-y-8 max-w-2xl">
-                                    <h2 className="text-brand-accent font-black text-sm tracking-widest uppercase mb-4">{item.title}</h2>
+                                <div className="space-y-6 md:space-y-8 max-w-2xl">
+                                    <h2 className="text-brand-accent font-black text-[10px] md:text-sm tracking-widest uppercase mb-2 md:mb-4">{item.title}</h2>
                                     <div
-                                        className="text-2xl text-slate-700 leading-relaxed font-medium"
+                                        className="section-desc text-slate-700"
                                         dangerouslySetInnerHTML={{
                                             __html: item.content
-                                                .replace(/'Crafti Innovations'/g, "<strong>'Crafti Innovations'</strong>")
-                                                .replace(/'Crafti Innovations Private Limited'/g, "<strong>'Crafti Innovations Private Limited'</strong>")
-                                                .replace(/Crafti Innovations/g, "<strong>Crafti Innovations</strong>")
+                                                .replace(/'Crafi Innovations'/g, "<strong>'Crafi Innovations'</strong>")
+                                                .replace(/'Crafi Innovations Private Limited'/g, "<strong>'Crafi Innovations Private Limited'</strong>")
+                                                .replace(/Crafi Innovations/g, "<strong>Crafi Innovations</strong>")
                                         }}
                                     />
                                 </div>
                             </ScrollReveal>
 
                             {/* Metadata / Logo Marker (Bottom Left) */}
-                            <div className="absolute bottom-12 left-12 opacity-40 group">
-                                <Palette className="w-8 h-8 text-brand-dark" />
+                            <div className="hidden lg:block absolute bottom-8 left-8 md:bottom-12 md:left-12 opacity-40 group">
+                                <Palette className="w-6 h-6 md:w-8 md:h-8 text-brand-dark" />
                             </div>
                         </div>
 
                         {/* Image Content */}
-                        <div className="lg:w-1/2 relative min-h-[60vh] overflow-hidden">
-                            <Image
-                                src={[
-                                    "/images/about_history_new_1772613726539.png",
-                                    "/images/about_facility_new_1772613741689.png",
-                                    "/images/about_artistry_new_1772613759387.png"
-                                ][idx]}
-                                alt={item.title}
-                                fill
-                                className="object-cover"
-                            />
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/40 to-transparent" />
-                            <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/40 to-transparent" />
+                        <div className="lg:w-1/2 px-8 pb-8 md:p-0 relative">
+                            <div className="relative h-full min-h-[40vh] md:min-h-[60vh] overflow-hidden rounded-2xl md:rounded-none">
+                                <Image
+                                    src={[
+                                        "/images/about_history_new_1772613726539.png",
+                                        "/images/about_facility_new_1772613741689.png",
+                                        "/images/about_artistry_new_1772613759387.png"
+                                    ][idx]}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover"
+                                />
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-x-0 top-0 h-24 md:h-32 bg-linear-to-b from-black/40 to-transparent" />
+                                <div className="absolute inset-x-0 bottom-0 h-24 md:h-32 bg-linear-to-t from-black/40 to-transparent" />
 
-                            {/* Slide Number / Dots (Editorial Visuals from image) */}
-                            <div className="absolute bottom-12 right-12 flex flex-col items-end text-white/60">
-                                <div className="grid grid-cols-3 gap-2 mb-4">
-                                    {Array.from({ length: 9 }).map((_, i) => (
-                                        <div key={i} className="w-1.5 h-1.5 rounded-full bg-white/40" />
-                                    ))}
+                                <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12 flex flex-col items-end text-white/60">
+                                    <div className="grid grid-cols-3 gap-1.5 md:gap-2 mb-3 md:mb-4">
+                                        {Array.from({ length: 9 }).map((_, i) => (
+                                            <div key={i} className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white/40" />
+                                        ))}
+                                    </div>
+                                    <span className="font-mono text-xs md:text-sm tracking-tighter">0{idx + 1}</span>
                                 </div>
-                                <span className="font-mono text-sm tracking-tighter">0{idx + 1}</span>
                             </div>
                         </div>
                     </div>
@@ -102,9 +106,9 @@ export default function AboutPage() {
 
 
             {/* History Summary/Stats Section */}
-            <section className="py-24 editorial-bg-ivory border-b border-slate-100">
+            <section className="section-padding editorial-bg-ivory border-b border-slate-100">
                 <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                         {[
                             { label: "Founded", value: "2003" },
                             { label: "Pvt Ltd Since", value: "2022" },
@@ -112,9 +116,9 @@ export default function AboutPage() {
                             { label: "Craft Quality", value: "Premium" }
                         ].map((stat, idx) => (
                             <ScrollReveal key={idx} delay={idx * 0.1}>
-                                <div className="flex flex-col border-l-4 border-brand-accent pl-8">
-                                    <span className="text-4xl font-black text-brand-dark mb-2">{stat.value}</span>
-                                    <span className="text-xs font-black uppercase tracking-widest text-slate-400">{stat.label}</span>
+                                <div className="flex flex-col border-l-4 border-brand-accent pl-4 md:pl-8">
+                                    <span className="text-2xl md:text-4xl font-black text-brand-dark mb-1 md:mb-2">{stat.value}</span>
+                                    <span className="text-[10px] md:text-xs font-black uppercase tracking-widest text-slate-400">{stat.label}</span>
                                 </div>
                             </ScrollReveal>
                         ))}
@@ -123,57 +127,42 @@ export default function AboutPage() {
             </section>
 
             {/* Achievements Section - High Impact Showcase */}
-            <section className="py-24 lg:py-40 bg-white">
+            <section className="section-padding editorial-bg-ivory border-t border-slate-200">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col items-center mb-24 text-center">
+                    <div className="flex flex-col mb-12 md:mb-16 lg:mb-20">
                         <ScrollReveal>
-                            <span className="text-brand-accent font-black uppercase tracking-[0.4em] text-[10px] block mb-6 px-4 py-2 border border-brand-accent/20 rounded-full">Honors & Recognition</span>
-                            <h2 className="text-6xl md:text-7xl font-black text-brand-dark uppercase tracking-tighter leading-none mb-8">
+                            <span className="text-brand-accent font-black uppercase tracking-[0.4em] text-[10px] md:text-sm block mb-4">Recognition & Excellence</span>
+                            <h2 className="section-title mb-6 md:mb-8">
                                 REMARKABLE<br />
-                                <span className="text-brand-accent italic">ACHIEVEMENTS.</span>
+                                <span className="text-brand-dark opacity-60 italic font-serif lowercase tracking-normal">Achievements.</span>
                             </h2>
-                            <p className="text-xl text-slate-600 max-w-2xl leading-relaxed font-serif italic">
+                            <p className="section-desc max-w-2xl border-l-2 border-brand-accent/30 pl-6 md:pl-8">
                                 "Celebrating years of excellence, dedicated leadership, and the prestigious recognition from national and international leaders."
                             </p>
                         </ScrollReveal>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
                         {companyProfile.achievements?.map((ach, idx) => (
-                            <ScrollReveal key={idx} delay={idx * 0.05} direction={idx % 2 === 0 ? "up" : "down"}>
-                                <div className="group relative bg-[#F9F9F7] overflow-hidden transition-all duration-700 hover:shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] flex flex-col h-full rounded-2xl border border-slate-100">
-                                    <div className="relative h-72 overflow-hidden">
+                            <ScrollReveal key={idx} delay={idx * 0.1}>
+                                <div className="group relative flex flex-col gap-6 md:gap-8">
+                                    <div className="relative aspect-16/10 md:aspect-video overflow-hidden rounded-4xl shadow-2xl">
                                         <Image
                                             src={ach.image}
                                             alt={ach.title}
                                             fill
-                                            className="object-cover transition-all duration-1000 group-hover:scale-110"
+                                            className="object-cover transition-all duration-1000 group-hover:scale-105"
                                         />
-                                        <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-brand-dark/0 transition-colors" />
-
-                                        {/* Slide Count */}
-                                        <div className="absolute top-6 right-6 p-4 bg-white/90 backdrop-blur-md rounded-xl shadow-xl flex flex-col items-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                            <span className="text-xs font-black text-brand-dark leading-none">0{idx + 1}</span>
-                                        </div>
+                                        <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-700" />
                                     </div>
 
-                                    <div className="p-10 flex-1 flex flex-col">
-                                        <h3 className="text-2xl font-black text-brand-dark uppercase tracking-tight mb-4 group-hover:text-brand-accent transition-colors">
+                                    <div className="space-y-4 md:space-y-6">
+                                        <h3 className="text-2xl md:text-4xl font-black text-brand-dark uppercase tracking-tighter leading-tight group-hover:text-brand-accent transition-colors duration-500">
                                             {ach.title}
                                         </h3>
-                                        <p className="text-slate-600 text-sm leading-relaxed italic font-serif opacity-80 group-hover:opacity-100 transition-opacity">
+                                        <p className="section-desc text-lg md:text-xl text-slate-600 leading-relaxed font-serif italic opacity-80 group-hover:opacity-100 transition-opacity">
                                             "{ach.description}"
                                         </p>
-
-                                        {/* Aesthetic Marker */}
-                                        <div className="mt-8 pt-8 border-t border-slate-200/60 flex items-center justify-between">
-                                            <div className="flex gap-1.5 overflow-hidden">
-                                                {[...Array(5)].map((_, i) => (
-                                                    <div key={i} className="w-1 h-1 rounded-full bg-brand-accent/20 group-hover:bg-brand-accent transition-all duration-500" style={{ transitionDelay: `${i * 100}ms` }} />
-                                                ))}
-                                            </div>
-                                            <div className="text-[10px] font-black uppercase tracking-widest text-slate-300">Certified Excellence</div>
-                                        </div>
                                     </div>
                                 </div>
                             </ScrollReveal>

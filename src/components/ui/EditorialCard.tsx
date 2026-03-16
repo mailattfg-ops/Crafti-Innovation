@@ -58,21 +58,21 @@ export function EditorialCard({
 
     return (
         <div className={cn(
-            "bg-white p-12 md:p-16 hover:bg-brand-light transition-colors group flex flex-col h-full",
+            "bg-brand-light p-8 md:p-12 lg:p-16 transition-colors group flex flex-col h-full",
             className
         )}>
             <ScrollReveal delay={index * 0.1}>
                 {Icon && (
-                    <div className="h-16 w-16 bg-brand-dark text-white rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-accent transition-all duration-500 shadow-xl border border-white/10">
-                        <Icon className="w-8 h-8" />
+                    <div className="h-12 w-12 md:h-16 md:w-16 bg-brand-dark text-white rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 group-hover:bg-brand-accent transition-all duration-500 shadow-xl border border-white/10">
+                        <Icon className="w-6 h-6 md:w-8 md:h-8" />
                     </div>
                 )}
 
-                <h3 className="text-3xl font-black text-brand-dark mb-6 uppercase tracking-tight leading-none group-hover:text-brand-accent transition-colors">
+                <h3 className="text-2xl md:text-3xl font-black text-brand-dark mb-4 md:mb-6 uppercase tracking-tight leading-none group-hover:text-brand-accent transition-colors">
                     {title}
                 </h3>
 
-                <p className="text-slate-600 italic leading-relaxed text-lg mb-8">
+                <p className="text-base md:text-lg text-slate-600 italic leading-relaxed mb-6 md:mb-8">
                     "{description}"
                 </p>
 

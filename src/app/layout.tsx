@@ -7,14 +7,12 @@ import { Metadata } from "next";
 import { config } from "@/data/config";
 
 export const metadata: Metadata = {
-    title: {
-        default: `${config.companyName} | Artistry in Every Detail`,
-        template: `%s | ${config.companyName}`
-    },
-    description: "Bespoke interiors, unique handmade products, and artisanal gift collections. Crafti Innovations combines traditional artistry with modern design to create lasting impressions.",
+    title: "Crafi Innovations | Artistic Excellence & Modern Craftsmanship",
+    description: "Discover Crafi Innovations - where traditional artistry meets contemporary design. Specialized in bespoke solutions for national and international projects.",
     keywords: ["Handmade Products", "Bespoke Interiors", "Artisanal Gifts", "Traditional Craftsmanship", "Kerala Artistry", "Interior Design Kerala", "Custom Handicrafts", "Export Quality Crafts"],
-    authors: [{ name: "Crafti Innovations" }],
-    creator: "Crafti Innovations",
+    authors: [{ name: "Crafi Innovations" }],
+    creator: "Crafi Innovations",
+    publisher: "Crafi Innovations",
     openGraph: {
         type: "website",
         locale: "en_IN",
@@ -49,7 +47,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body className="antialiased">
                 <JsonLd />
                 <Navbar />

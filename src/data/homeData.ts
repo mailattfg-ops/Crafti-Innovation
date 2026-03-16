@@ -1,60 +1,60 @@
 export const heroData = {
   title: {
-    main: "Crafti Innovations",
-    highlight: "Artistry in Every Detail"
+    main: "Artistry in Every Detail",
+    highlight: "CRAFI."
   },
-  description: "Specializing in unique, handmade products and bespoke interiors, we combine traditional craftsmanship with modern innovation to create lasting impressions."
+  description: "Defining the pinnacle of bespoke interiors since 2003. We weave traditional wisdom with modern luxury to craft products and spaces that tell a story of unparalleled excellence."
 };
 
 export const expertiseData = [
   { 
     id: "handmade",
-    title: "Handmade Products", 
-    description: "Unique, artfully crafted pieces across a variety of categories, embodying the highest standards of artistry." 
+    title: "Handmade Masterpieces", 
+    description: "Artfully curated pieces that transcend utilitarian function, embodying centuries of skill and a vision for contemporary elegance." 
   },
   { 
     id: "interiors",
     title: "Bespoke Interiors", 
-    description: "Custom interior designs and intricate decorative pieces tailored for high-profile projects and residences." 
+    description: "Masterfully designed environments where architectural precision meets couture-level detailing, tailored for the world's most discerning spaces." 
   },
   { 
     id: "gifts",
-    title: "Unique Gifts", 
-    description: "One-of-a-kind gift items designed to tell a story and leave a memorable impact on every recipient." 
+    title: "Artisanal Gifts", 
+    description: "Heirloom-quality tokens of appreciation, meticulously crafted to transform a gesture into a lasting legacy of sophistication." 
   },
   { 
     id: "production",
-    title: "Large-Scale Production", 
-    description: "Advanced manufacturing unit capable of meeting large-scale production needs while upholding meticulous quality standards." 
+    title: "Industrial Artistry", 
+    description: "Our avant-garde manufacturing facility bridges the gap between artisanal intimacy and industrial scale, ensuring uncompromising quality at any volume." 
   },
   { 
     id: "craftsmanship",
-    title: "Skilled Craftsmanship", 
-    description: "A team of skilled artisans with decades of experience, blending traditional techniques with modern designs." 
+    title: "Master Craftsmanship", 
+    description: "A synergy of master artisans whose hands breathe life into raw materials, preserving the soul of the craft while pioneering modern aesthetics." 
   },
   { 
     id: "reach",
-    title: "Global Reach", 
-    description: "Expertise in international trade, specializing in export and import with a strong customer-oriented approach." 
+    title: "Global Excellence", 
+    description: "Connecting the world to the heart of artisanal excellence through a seamless network of international trade and bespoke logistics." 
   }
 ];
 
 export const whyChooseUsData = [
   { 
-    title: "Unique Designs", 
-    description: "We offer designs that stand out, meticulously crafted to reflect creativity and innovation. Each piece is thoughtfully created to bring a sense of uniqueness to our customers ensuring that no two pieces are ever alike. Our commitment to originality means that our designs not only follow trends but also set them." 
+    title: "Singular Originals", 
+    description: "Each creation is an original thesis in design, born from a refusal to mimic. We don't just follow aesthetics; we architect them, ensuring every piece remains a singular statement of individuality." 
   },
   { 
-    title: "Ethically Sourced Materials", 
-    description: "We are dedicated to sustainability and responsible sourcing. Our materials are carefully selected from ethical suppliers ensuring they are both high-quality and eco-friendly. By choosing us, you are supporting a business that values fair practices and is committed to reducing its environmental impact." 
+    title: "Sovereign Sourcing", 
+    description: "Our commitment to the earth is as profound as our commitment to the craft. We meticulously vet every provenance, ensuring that our materials are as pure in origin as they are in quality." 
   },
   { 
-    title: "Customization", 
-    description: "We believe in personalization, so we offer customization options to bring your vision to life. Whether it's a unique color, material or design tweak, we work with you to create a piece that is truly yours. Our customization process ensures that each item reflects your style and preferences." 
+    title: "Bespoke Collaboration", 
+    description: "The client's vision is our ultimate canvas. From subtle nuances to structural transformations, we collaborate to ensure that every finished piece is an intimate reflection of your specific narrative." 
   },
   { 
-    title: "Skilled Artisans", 
-    description: "Our team is made up of skilled artisans with years of experience, bringing traditional craftsmanship to each item. They take pride in their craft, blending traditional techniques with modern designs to produce exceptional quality. Their dedication and artistry guarantee a product that is both beautiful and built to last." 
+    title: "Legacy Studio", 
+    description: "Our studio is a sanctuary for mastery. Here, decades of inherited wisdom converge with innovative spirits to produce work that is technically flawless and emotionally resonant." 
   }
 ];
 
@@ -62,7 +62,7 @@ export const testimonialsData = [
   {
     name: "Business Director",
     role: "Corporate Client",
-    content: "Crafti Innovations transformed our office interior with pieces that perfectly balance professional elegance and traditional artistry."
+    content: "Crafi Innovations transformed our office interior with pieces that perfectly balance professional elegance and traditional artistry."
   },
   {
     name: "Private Collector",
@@ -80,15 +80,15 @@ export const companyProfile = {
   narrative: [
     {
       title: "Our History",
-      content: "In 2003, He established 'Crafti Innovations' transitioned into a proprietorship, marking a pivotal step in its growth. Later in 2022, he has formed a private limited company in the name and style as 'Crafti Innovations Private Limited'. This shift enabled the company to expand its reach, securing major projects, including government initiatives, traditional resorts, and bespoke interiors."
+      content: "In 2003, He established 'Crafi Innovations' transitioned into a proprietorship, marking a pivotal step in its growth. Later in 2022, he has formed a private limited company in the name and style as 'Crafi Innovations Private Limited'. This shift enabled the company to expand its reach, securing major projects, including government initiatives, traditional resorts, and bespoke interiors."
     },
     {
       title: "Our Facilities",
-      content: "Operating on a 1.5-acre site with a fully equipped factory, advanced machinery, and a dedicated manufacturing unit, Crafti Innovations ensures large-scale production while upholding meticulous quality standards. Its facility supports diverse manufacturing processes, from intricate decorative pieces to custom designs for high-profile projects."
+      content: "Operating on a 1.5-acre site with a fully equipped factory, advanced machinery, and a dedicated manufacturing unit, Crafi Innovations ensures large-scale production while upholding meticulous quality standards. Its facility supports diverse manufacturing processes, from intricate decorative pieces to custom designs for high-profile projects."
     },
     {
       title: "Our Positioning",
-      content: "By investing in cutting-edge equipment and a comprehensive manufacturing setup, Crafti Innovations is well-positioned to meet the needs of both local and national clients. The company balances efficiency with artistry, preserving the cultural authenticity that defines its brand."
+      content: "By investing in cutting-edge equipment and a comprehensive manufacturing setup, Crafi Innovations is well-positioned to meet the needs of both local and national clients. The company balances efficiency with artistry, preserving the cultural authenticity that defines its brand."
     }
   ],
   vision: "To lead the craft sector by preserving cultural authenticity while embracing modern innovation and global trade standards.",
@@ -97,7 +97,7 @@ export const companyProfile = {
     {
       title: "Handover to Union Home Minister",
       description: "When Chief Minister Pinarayi Vijayan presented a box containing Aranmula mirrors as a gift to Union Home Minister Amit Shah.",
-      image: "/images/contact_hero_editorial_final_1772621012275.png"
+      image: "/images/contact.png"
     },
     {
       title: "Recognition for Cultural Artistry",
@@ -129,31 +129,28 @@ export const companyProfile = {
 
 export const servicesData = expertiseData;
 export const prestigiousClients = [
-  "MSME (Govt. of India)",
-  "KTDC (Kerala Tourism)",
-  "LOVE GREEN",
-  "ADANI GROUP",
-  "KERALA ARTS & CRAFTS VILLAGE",
-  "ULCCS FOUNDATION",
-  "DARUL HUDA ISLAMIC UNIVERSITY",
-  "MARKAZ",
-  "UNIVERSITY OF KERALA",
-  "MARKAZ KNOWLEDGE CITY",
-  "THE RAVIZ KADAVU",
-  "NEXSTAY HOTELS",
-  "HUG A MUG",
-  "SIGN RESTAURANT",
-  "THE KRYAT",
-  "NOWRAS",
-  "ALMAS PERFUME",
-  "SANCHI BAGS",
-  "TALENMARK DEVELOPERS",
-  "ORBIZ CREATIVEZ",
-  "JAPAN SQUARE",
-  "GEM PLAST",
-  "CAKE STUDIO",
-  "ZELEBRATE",
-  "ECOMOUNT"
+  { name: "ADANI GROUP", logo: "/images/ADANI GROUP_11zon.jpg" },
+  { name: "MARKAZ KNOWLEDGE CITY", logo: "/images/MARKAZ.webp" },
+  { name: "UNIVERSITY OF KERALA", logo: "/images/UNIVERSITY OF KERALA.webp" },
+  { name: "DARUL HUDA ISLAMIC UNIVERSITY", logo: "/images/DARUL HUDA ISLAMIC UNIVERSITY.webp" },
+  { name: "KERALA ARTS & CRAFTS VILLAGE", logo: "/images/KERALA ARTS CRAFTS VILLAGE.webp" },
+  { name: "KTDC (Kerala Tourism)", logo: "/images/KTDC.webp" },
+  { name: "ULCCS FOUNDATION", logo: "/images/ULCCS FOUNDATION_11zon (1).jpg" },
+  { name: "MSME (Govt. of India)", logo: "/images/MSME_11zon.jpeg" },
+  { name: "THE RAVIZ KADAVU", logo: "/images/Raviz.webp" },
+  { name: "NEXSTAY HOTELS", logo: "/images/NEXSTAY HOTELS.webp" },
+  { name: "SIGN RESTAURANT", logo: "/images/SIGN_RESTAURANT.webp" },
+  { name: "NOWRAS", logo: "/images/NOWRAS.webp" },
+  { name: "ALMAS PERFUME", logo: "/images/ALMAS_PERFUME.webp" },
+  { name: "SANCHI BAGS", logo: "/images/SANCHI BAGS_11zon.jpg" },
+  { name: "TALENMARK DEVELOPERS", logo: "/images/TALENMARK DEVELOPERS_11zon.jpg" },
+  { name: "ORBIZ CREATIVEZ", logo: "/images/ORBIZ_CREATIVEZ.webp" },
+  { name: "JAPAN SQUARE", logo: "/images/JAPAN SQUARE_11zon.jpg" },
+  { name: "GEM PLAST", logo: "/images/GEM_PLAST.webp" },
+  { name: "CAKE STUDIO", logo: "/images/CAKE STUDIO_11zon.webp" },
+  { name: "ZELEBRATE", logo: "/images/ZELEBRATE.webp" },
+  { name: "ECOMOUNT", logo: "/images/ECOMOUNTS_11zon.jpg" },
+  { name: "LOVE GREEN", logo: "/images/Lovegreen.webp" }
 ];
 export const currentProjects = [
   "Resort Decor Overhaul",
@@ -168,7 +165,7 @@ export const editorialSections = [
     description: "Custom-made award items with artistic detailing for corporate events and recognition ceremonies.",
     iconName: "Trophy",
     images: [
-      "/images/contact_hero_editorial_final_1772621012275.png",
+      "/images/contact.png",
       "/images/filler_artistry_v1_1772621529599.png",
       "/images/home_hero_new_1772613660238.png",
       "/images/filler_artistry_v1_1772621529599.png"

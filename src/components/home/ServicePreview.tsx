@@ -2,7 +2,7 @@
 
 import { servicesData } from "@/data/homeData";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CraftiCard } from "@/components/ui/CraftiCard";
+import { CrafiCard } from "@/components/ui/CrafiCard";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -20,7 +20,7 @@ export function ServicePreview() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-16 md:mb-20 pt-10">
                     {previewServices.map((service, idx) => (
-                        <CraftiCard key={idx} rotate={idx % 2 === 0 ? "rotate-2" : "-rotate-2"}>
+                        <CrafiCard key={idx} rotate={idx % 2 === 0 ? "rotate-2" : "-rotate-2"}>
                             <div className="text-left">
                                 <h3 className="text-2xl font-black text-slate-900 mb-4">{service.title}</h3>
                                 <p className="text-slate-600 mb-8 line-clamp-2 italic leading-relaxed">"{service.description}"</p>
@@ -28,7 +28,7 @@ export function ServicePreview() {
                                     Details <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
-                        </CraftiCard>
+                        </CrafiCard>
                     ))}
                 </div>
 

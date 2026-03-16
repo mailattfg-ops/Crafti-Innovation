@@ -45,7 +45,7 @@ export default function NotFound() {
 
                     {/* Footer decoration */}
                     <div className="mt-16 pt-8 border-t border-slate-100 flex justify-between items-center opacity-30 select-none">
-                        <span className="text-[9px] font-black uppercase tracking-widest text-slate-400">Crafti Innovations Archive</span>
+                        <span className="text-[9px] font-black uppercase tracking-widest text-slate-400">Crafi Innovations Archive</span>
                         <div className="flex gap-1">
                             {[...Array(5)].map((_, i) => (
                                 <div key={i} className="w-1 h-1 rounded-full bg-slate-400" />

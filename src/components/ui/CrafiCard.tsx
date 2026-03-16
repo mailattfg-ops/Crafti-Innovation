@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-interface CraftiCardProps {
+interface CrafiCardProps {
     children: React.ReactNode;
     className?: string;
     accentColor?: string;
@@ -22,7 +22,7 @@ export function CrafiCard({
     description,
     image,
     href
-}: CraftiCardProps) {
+}: CrafiCardProps) {
     return (
         <div className="relative group h-full">
             {/* Background Accent Layer */}

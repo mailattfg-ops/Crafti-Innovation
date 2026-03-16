@@ -5,15 +5,15 @@ export function JsonLd() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": config.companyName,
-        "description": "Bespoke interiors, unique handmade products, and artisanal gift collections. Crafti Innovations combines traditional artistry with modern design.",
-        "url": "https://www.craftiinnovations.com",
+        "description": "Bespoke interiors, unique handmade products, and artisanal gift collections. Crafi Innovations combines traditional artistry with modern design.",
+        "url": "https://www.crafiinnovations.com",
         "telephone": config.whatsappNumber,
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Nandikkara, Thrissur",
-            "addressLocality": "Thrissur",
-            "addressRegion": "Kerala",
-            "postalCode": "680301",
+            "name": "Crafi Innovations",
+            "url": "https://crafi.in",
+            "logo": "https://crafi.in/logo.png",
             "addressCountry": "IN"
         },
     };

@@ -34,11 +34,11 @@ export function EditorialBlock({
     const Icon = iconName ? iconMap[iconName as keyof typeof iconMap] : null;
 
     return (
-        <section className={`editorial-section overflow-hidden ${bgIvory ? 'editorial-bg-ivory' : 'bg-white'}`}>
+        <section className={`section-padding overflow-hidden ${bgIvory ? 'editorial-bg-ivory' : 'bg-white'}`}>
             <div className={`editorial-grid w-full ${reverse ? 'lg:flex-row-reverse' : ''}`}>
 
                 {/* Text Area */}
-                <div className={`p-12 md:p-24 flex flex-col justify-center ${reverse ? 'lg:order-2' : ''}`}>
+                <div className={`p-8 md:p-16 lg:p-24 flex flex-col justify-center ${reverse ? 'lg:order-2' : ''}`}>
                     <ScrollReveal direction={reverse ? "left" : "right"}>
                         <span className="editorial-quote">“</span>
                         <h2 className="editorial-heading mb-8">
@@ -46,12 +46,12 @@ export function EditorialBlock({
                         </h2>
 
                         {Icon && (
-                            <div className="flex items-start gap-4 mt-8">
-                                <Icon className="w-10 h-10 text-brand-accent shrink-0" />
-                                <div>
-                                    <h3 className="text-2xl font-black text-brand-accent uppercase tracking-tight">{subheading}</h3>
-                                    <p className="text-slate-600 italic leading-relaxed max-w-md">
-                                        {description}
+                            <div className="flex items-start gap-4 mt-8 md:mt-12">
+                                <Icon className="w-8 h-8 md:w-12 md:h-12 text-brand-accent shrink-0" />
+                                <div className="space-y-2 md:space-y-4">
+                                    <h3 className="text-xl md:text-2xl font-black text-brand-accent uppercase tracking-tight">{subheading}</h3>
+                                    <p className="text-sm md:text-base text-slate-600 italic leading-relaxed max-w-md">
+                                        "{description}"
                                     </p>
                                 </div>
                             </div>

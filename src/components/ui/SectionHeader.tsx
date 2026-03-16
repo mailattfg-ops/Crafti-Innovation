@@ -14,11 +14,11 @@ export function SectionHeader({ title, subtitle, className, align = "center" }: 
             align === "center" ? "text-center" : "text-left",
             className
         )}>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-brand-dark">
+            <h2 className="section-title">
                 {title}
             </h2>
             {subtitle && (
-                <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                <p className="section-desc text-slate-600 max-w-2xl">
                     {subtitle}
                 </p>
             )}

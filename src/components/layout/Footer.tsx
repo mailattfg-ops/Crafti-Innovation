@@ -40,20 +40,20 @@ export function Footer() {
                         </div>
                     </div>
 
-                    {/* Links Grid - 7 Columns divided into 3 sub-cols */}
-                    <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-12">
+                    {/* Links Grid - 7 Columns divided into sub-cols */}
+                    <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8">
                         {/* Directory */}
-                        <div className="space-y-8">
-                            <h4 className="text-[10px] font-black text-brand-accent uppercase tracking-[0.4em]">Directory</h4>
-                            <ul className="space-y-4">
+                        <div className="space-y-6 md:space-y-8">
+                            <h4 className="text-[8px] md:text-[10px] font-black text-brand-accent uppercase tracking-[0.4em]">Directory</h4>
+                            <ul className="space-y-3 md:space-y-4">
                                 {["Home", "About Us", "Services", "Contact"].map((link) => (
                                     <li key={link}>
                                         <Link
                                             href={link === "Home" ? "/" : `/${link.toLowerCase().replace(" ", "")}`}
-                                            className="text-white text-lg font-bold hover:text-brand-accent transition-colors flex items-center gap-2 group"
+                                            className="text-white text-base md:text-lg font-bold hover:text-brand-accent transition-colors flex items-center gap-2 group"
                                         >
                                             {link}
-                                            <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
+                                            <ArrowUpRight className="w-3 h-3 md:w-4 md:h-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                                         </Link>
                                     </li>
                                 ))}
@@ -61,9 +61,9 @@ export function Footer() {
                         </div>
 
                         {/* Expertise */}
-                        <div className="space-y-8">
-                            <h4 className="text-[10px] font-black text-brand-accent uppercase tracking-[0.4em]">Expertise</h4>
-                            <ul className="space-y-4 text-sm font-bold text-slate-300">
+                        <div className="space-y-6 md:space-y-8">
+                            <h4 className="text-[8px] md:text-[10px] font-black text-brand-accent uppercase tracking-[0.4em]">Expertise</h4>
+                            <ul className="space-y-3 md:space-y-4 text-xs md:text-sm font-bold text-slate-300">
                                 <li className="hover:text-white transition-colors cursor-default">Bespoke Furnishings</li>
                                 <li className="hover:text-white transition-colors cursor-default">Artistic Awards</li>
                                 <li className="hover:text-white transition-colors cursor-default">Luxury Households</li>
@@ -73,20 +73,20 @@ export function Footer() {
                         </div>
 
                         {/* Connection */}
-                        <div className="space-y-8">
-                            <h4 className="text-[10px] font-black text-brand-accent uppercase tracking-[0.4em]">Connection</h4>
-                            <ul className="space-y-6 text-sm">
-                                <li className="flex flex-col gap-2">
+                        <div className="col-span-2 md:col-span-1 space-y-6 md:space-y-8 mt-12 md:mt-0">
+                            <h4 className="text-[8px] md:text-[10px] font-black text-brand-accent uppercase tracking-[0.4em]">Connection</h4>
+                            <ul className="space-y-4 md:space-y-6 text-xs md:text-sm">
+                                <li className="flex flex-col gap-1 md:gap-2">
                                     <span className="text-white font-bold">Studio HQ</span>
-                                    <span className="text-slate-400">Kodakara, Kerala, India</span>
+                                    <span className="text-slate-400">Royapettah, Chennai, India</span>
                                 </li>
-                                <li className="flex flex-col gap-2">
+                                <li className="flex flex-col gap-1 md:gap-2">
                                     <span className="text-white font-bold">Inquiries</span>
-                                    <a href={`mailto:${config.email}`} className="text-brand-accent hover:text-white transition-colors underline underline-offset-4">
+                                    <a href={`mailto:${config.email}`} className="text-brand-accent hover:text-white transition-colors underline underline-offset-4 break-all">
                                         {config.email}
                                     </a>
                                 </li>
-                                <li className="flex flex-col gap-2">
+                                <li className="flex flex-col gap-1 md:gap-2">
                                     <span className="text-white font-bold">WhatsApp</span>
                                     <a href={`tel:${config.whatsappNumber.replace(/\s/g, "")}`} className="hover:text-white transition-colors">
                                         {config.whatsappNumber}

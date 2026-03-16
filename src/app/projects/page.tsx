@@ -7,67 +7,68 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Our Projects",
-    description: "View the prestigious initiatives of Crafti Innovations. Our work spans national heritage projects, high-end resort decors, and international trade showcases.",
+    description: "View the prestigious initiatives of Crafi Innovations. Our work spans national heritage projects, high-end resort decors, and international trade showcases.",
 };
 
 export default function ProjectsPage() {
     return (
-        <main className="bg-white pt-24 min-h-screen">
+        <main className="bg-white min-h-screen">
             {/* Split Screen Editorial Hero */}
-            <section className="editorial-section editorial-bg-ivory border-b border-slate-200">
-                <div className="editorial-grid w-full">
-                    <div className="p-12 md:p-24 flex flex-col justify-center">
-                        <ScrollReveal direction="down">
-                            <span className="editorial-quote">“</span>
-                            <h1 className="editorial-heading mb-8">
-                                PRESTIGIOUS<br />
-                                <span className="text-brand-dark opacity-60">INITIATIVES.</span>
-                            </h1>
-                            <p className="text-2xl text-slate-700 max-w-xl leading-relaxed font-serif italic mb-12">
-                                "Building cultural touchstones and delivering excellence across national and international stages."
-                            </p>
-                        </ScrollReveal>
-                    </div>
-                    <div className="relative min-h-[50vh] lg:min-h-full overflow-hidden">
+            <section className="hero-viewport bg-brand-light">
+                <div className="absolute inset-0 lg:relative lg:flex lg:flex-row items-stretch h-full">
+                    {/* Image Layer */}
+                    <div className="absolute inset-0 lg:relative lg:flex-1 lg:order-2 overflow-hidden">
                         <Image
                             src="/images/projects_hero_final_v3_1772620310379.png"
-                            alt="Prestigious Projects Exhibition"
+                            alt="Prestigious Projects Exhibition - Crafi Innovations"
                             fill
-                            className="object-cover"
+                            className="object-cover lg:object-center"
                             priority
                         />
-                        {/* Subtle aesthetic overlay */}
-                        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-black/20 to-transparent" />
-                        <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/20 to-transparent" />
+                        <div className="absolute inset-0 hero-image-overlay z-10" />
+                    </div>
+
+                    {/* Content Layer */}
+                    <div className="relative z-20 h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:flex-1 lg:order-1 p-6 md:p-16 lg:p-24 pt-32 lg:pt-32">
+                        <ScrollReveal direction="down">
+                            <span className="editorial-quote mx-auto lg:mx-0">“</span>
+                            <h1 className="editorial-heading mb-6 lg:mb-6 mx-auto lg:mx-0">
+                                PRESTIGIOUS<br />
+                                <span className="text-white lg:text-brand-dark opacity-60 lg:opacity-40">INITIATIVES.</span>
+                            </h1>
+                            <p className="section-desc text-slate-200 lg:text-slate-700 max-w-lg mb-8 mx-auto lg:mx-0">
+                                "Architecting cultural landmarks and defining the standard of excellence on the most prestigious national and international stages."
+                            </p>
+                        </ScrollReveal>
                     </div>
                 </div>
             </section>
 
             {/* Projects Timeline/Grid */}
-            <div className="container mx-auto px-6 py-24 space-y-40">
+            <div className="container mx-auto px-6 section-padding space-y-24 md:space-y-40">
                 {projectsData.map((project, idx) => (
                     <ScrollReveal key={project.id} delay={0.1}>
                         <div className={cn(
-                            "flex flex-col lg:flex-row gap-16 lg:gap-24 items-start",
+                            "flex flex-col lg:flex-row gap-8 md:gap-16 lg:gap-24 items-start",
                             idx % 2 !== 0 ? "lg:flex-row-reverse" : ""
                         )}>
                             {/* Project Info */}
-                            <div className="lg:w-2/5 sticky top-32">
-                                <div className="space-y-6">
+                            <div className="lg:w-2/5 lg:sticky lg:top-32">
+                                <div className="space-y-4 md:space-y-6">
                                     <div className="flex items-center gap-4">
-                                        <span className="text-brand-accent font-mono text-sm tracking-tighter italic">0{idx + 1}</span>
+                                        <span className="text-brand-accent font-mono text-[10px] md:text-sm tracking-tighter italic">0{idx + 1}</span>
                                         <div className="h-px flex-1 bg-slate-100" />
                                     </div>
 
-                                    <h2 className="text-5xl font-black text-brand-dark uppercase tracking-tighter leading-none">
+                                    <h2 className="section-title">
                                         {project.title}
                                     </h2>
 
-                                    <div className="space-y-4">
-                                        <span className="text-brand-accent font-black text-xs uppercase tracking-widest block">
+                                    <div className="space-y-3 md:space-y-4">
+                                        <span className="text-brand-accent font-black text-[10px] md:text-xs uppercase tracking-widest block">
                                             {project.initiative}
                                         </span>
-                                        <p className="text-lg text-slate-600 leading-relaxed font-serif italic border-l-2 border-slate-100 pl-6">
+                                        <p className="section-desc text-slate-600 border-l-2 border-slate-100 pl-4 md:pl-6">
                                             "{project.description}"
                                         </p>
                                     </div>
@@ -142,12 +143,12 @@ export default function ProjectsPage() {
             </div>
 
             {/* Footer CTA */}
-            <section className="py-24 border-t border-slate-100 text-center">
+            <section className="section-padding border-t border-slate-100 text-center">
                 <ScrollReveal>
-                    <h3 className="text-4xl font-black text-brand-dark uppercase tracking-tighter mb-12">HAVE A VISION FOR YOUR SPACE?</h3>
+                    <h3 className="section-title mb-12 md:mb-16">HAVE A VISION FOR YOUR SPACE?</h3>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-6 px-16 py-8 bg-brand-dark text-white rounded-full font-black text-sm tracking-[0.4em] uppercase hover:bg-brand-accent transition-colors duration-500 shadow-2xl"
+                        className="inline-flex items-center gap-4 md:gap-6 px-10 md:px-16 py-6 md:py-8 bg-brand-dark text-white rounded-full font-black text-[10px] md:text-sm tracking-[0.4em] uppercase hover:bg-brand-accent transition-colors duration-500 shadow-2xl"
                     >
                         Start A Conversation
                     </Link>
