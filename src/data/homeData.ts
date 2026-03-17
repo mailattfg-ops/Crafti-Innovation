@@ -80,49 +80,62 @@ export const companyProfile = {
   narrative: [
     {
       title: "Our History",
-      content: "In 2003, He established 'Crafi Innovations' transitioned into a proprietorship, marking a pivotal step in its growth. Later in 2022, he has formed a private limited company in the name and style as 'Crafi Innovations Private Limited'. This shift enabled the company to expand its reach, securing major projects, including government initiatives, traditional resorts, and bespoke interiors."
+      content: "Bridging traditional craftsmanship with modern luxury since 2003. We craft bespoke interiors and artisanal masterpieces that tell a story of unparalleled excellence.",
+      image: "/images/Our_teams.webp"
     },
     {
       title: "Our Facilities",
-      content: "Operating on a 1.5-acre site with a fully equipped factory, advanced machinery, and a dedicated manufacturing unit, Crafi Innovations ensures large-scale production while upholding meticulous quality standards. Its facility supports diverse manufacturing processes, from intricate decorative pieces to custom designs for high-profile projects."
+      content: "Operating on a 1.5-acre site with a fully equipped factory, advanced machinery, and a dedicated manufacturing unit, Crafi Innovations ensures large-scale production while upholding meticulous quality standards. Its facility supports diverse manufacturing processes, from intricate decorative pieces to custom designs for high-profile projects.",
+      image: "/images/about.webp"
     },
     {
       title: "Our Positioning",
-      content: "By investing in cutting-edge equipment and a comprehensive manufacturing setup, Crafi Innovations is well-positioned to meet the needs of both local and national clients. The company balances efficiency with artistry, preserving the cultural authenticity that defines its brand."
+      content: "By investing in cutting-edge equipment and a comprehensive manufacturing setup, Crafi Innovations is well-positioned to meet the needs of both local and national clients. The company balances efficiency with artistry, preserving the cultural authenticity that defines its brand.",
+      image: "/images/Crafi_shop1.webp"
     }
   ],
   vision: "To lead the craft sector by preserving cultural authenticity while embracing modern innovation and global trade standards.",
   mission: "To deliver high-quality, sustainable, and customizable handmade products that bring value and beauty to our clients worldwide.",
   achievements: [
     {
+      title: "Honored by Prime Minister",
+      description: "Prime Minister Narendra Modi receives a memento acknowledging the remarkable contributions of India's space scientists.",
+      image: "/images/Modi1.webp"
+    },
+    {
       title: "Handover to Union Home Minister",
       description: "When Chief Minister Pinarayi Vijayan presented a box containing Aranmula mirrors as a gift to Union Home Minister Amit Shah.",
-      image: "/images/contact.png"
+      image: "/images/Home_Minister1.webp"
     },
     {
       title: "Recognition for Cultural Artistry",
       description: "Kerala Chief Minister Sri Pinarayi Vijayan gifting traditional box to Actor Mr. Dulquer Salmaan.",
-      image: "/images/about_artistry_new_1772613759387.png"
+      image: "/images/Pm_Dq1.webp"
     },
     {
       title: "Gifting National Awardees",
       description: "Sri Pinarayi Vijayan gifting traditional box to Actress Mrs. Aparna Balamurali.",
-      image: "/images/about_facility_new_1772613741689.png"
+      image: "/images/Aparna.webp"
     },
     {
       title: "Honored for Leadership",
       description: "Managing Director Mr. Jobi V.V. was honored with appreciation from Mr. P.K. Kunhalikutty (Former Minister) for outstanding contributions.",
-      image: "/images/about_history_new_1772613726539.png"
-    },
-    {
-      title: "Honored by Prime Minister",
-      description: "Prime Minister Narendra Modi receives a memento acknowledging the remarkable contributions of India's space scientists.",
-      image: "/images/home_hero_new_1772613660238.png"
+      image: "/images/Pk1.webp"
     },
     {
       title: "International Appreciation",
       description: "Grand Mufti Of India Mr. Sheikh Abubakar Ahmad presenting gift to Kuwait Administrator.",
-      image: "/images/services_hero_new_1772613707429.png"
+      image: "/images/Kuwait.webp"
+    },
+    {
+      title: "Award for Excellence",
+      description: "Kerala Arts and Craft Village Trivandrum CEO Sreeprasad presented the award to Crafi for selling the most craft products.",
+      image: "/images/KACV_Award.webp"
+    },
+    {
+      title: "2024 Business Icon Award",
+      description: "Crafi Director KTA. Siddique received the 2024 Business Icon Award from Minister Sri Kadannapally Ramachandran at Malabar Chamber of Commerce Hall, Kannur.",
+      image: "/images/Business_Icon_Award.webp"
     }
   ]
 };
@@ -165,10 +178,15 @@ export const editorialSections = [
     description: "Custom-made award items with artistic detailing for corporate events and recognition ceremonies.",
     iconName: "Trophy",
     images: [
-      "/images/contact.png",
-      "/images/filler_artistry_v1_1772621529599.png",
-      "/images/home_hero_new_1772613660238.png",
-      "/images/filler_artistry_v1_1772621529599.png"
+      "/images/Product1.webp",
+      "/images/Product2.webp",
+      "/images/Product3.webp",
+      "/images/Product4.webp",
+      "/images/Product6.webp",
+      "/images/Product8.webp",
+      "/images/Product9.webp",
+      "/images/Business_Icon_Award.webp",
+      "/images/KACV_Award.webp"
     ],
     reverse: false
   },
@@ -178,10 +196,15 @@ export const editorialSections = [
     description: "Stylish and functional handcrafted items that add a touch of creativity to every room.",
     iconName: "Home",
     images: [
-      "/images/about_artistry_new_1772613759387.png",
-      "/images/filler_artistry_v1_1772621529599.png",
-      "/images/about_facility_new_1772613741689.png",
-      "/images/filler_artistry_v1_1772621529599.png"
+      "/images/Product5.webp",
+      "/images/Product6.webp",
+      "/images/Product14.webp",
+      "/images/Product8.webp",
+      "/images/Product9.webp",
+      "/images/Product10.webp",
+      "/images/Product11.webp",
+      "/images/Product12.webp",
+      "/images/Product13.webp"
     ],
     reverse: true
   },
@@ -191,10 +214,15 @@ export const editorialSections = [
     description: "Innovative design for commercial & govt. spaces featuring crafted decor and furniture.",
     iconName: "Layout",
     images: [
-      "/images/about_facility_new_1772613741689.png",
-      "/images/filler_artistry_v1_1772621529599.png",
-      "/images/services_hero_new_1772613707429.png",
-      "/images/filler_artistry_v1_1772621529599.png"
+      "/images/ULCCS2.webp",
+      "/images/keraleeyam1.webp",
+      "/images/keraleeyam5.webp",
+      "/images/chaliyam1.webp",
+      "/images/MASCOT2.webp",
+      "/images/ULCCS6.webp",
+      "/images/G20_1.webp",
+      "/images/G20_2.webp",
+      "/images/MASCOT1.webp"
     ],
     reverse: false
   }

@@ -8,7 +8,7 @@ export function Testimonials() {
     return (
         <section className="section-padding editorial-bg-ivory border-slate-200">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-12 md:mb-16 lg:mb-20">
+                <div className="text-center mb-6 md:mb-8 lg:mb-12">
                     <ScrollReveal>
                         <h2 className="section-title mb-6 md:mb-8 text-brand-dark">TESTIMONIALS.</h2>
                         <p className="section-desc text-slate-500 max-w-2xl mx-auto">"Reflections of our commitment to excellence and artisanal mastery."</p>

@@ -9,10 +9,10 @@ export function WhyChooseUs() {
         <section className="section-padding editorial-bg-ivory border-slate-200">
             <div className="editorial-grid w-full">
                 {/* Left Side: Editorial Philosophy */}
-                <div className="p-8 md:p-16 lg:p-18 lg:sticky lg:top-0 h-fit">
+                <div className="px-8 py-4 md:px-12 md:py-6 lg:px-16 lg:py-8 xl:px-18 xl:py-9 lg:sticky lg:top-0 h-fit">
                     <ScrollReveal>
                         <span className="editorial-quote">“</span>
-                        <h2 className="editorial-heading mb-6 md:mb-8">
+                        <h2 className="editorial-heading mb-4 md:mb-6 lg:mb-8">
                             OUR<br />
                             <span className="text-brand-dark opacity-60 italic font-serif lowercase tracking-normal">Philosophy.</span>
                         </h2>
@@ -30,10 +30,10 @@ export function WhyChooseUs() {
                 </div>
 
                 {/* Right Side: Staggered Feature List */}
-                <div className="px-8 md:px-16 lg:px-18 space-y-16 md:space-y-24">
+                <div className="px-8 md:px-16 lg:px-18 space-y-8 md:space-y-12">
                     {whyChooseUsData.map((item, idx) => (
                         <ScrollReveal key={idx} delay={idx * 0.1}>
-                            <div className="group relative flex flex-col gap-6 md:gap-8">
+                            <div className="group relative flex flex-col gap-2 md:gap-4 lg:gap-6 xl:gap-8">
                                 {/* Slide counter + line */}
                                 <div className="flex items-center gap-4">
                                     <span className="text-brand-accent font-black text-[10px] md:text-xs uppercase tracking-[0.4em]">0{idx + 1}</span>

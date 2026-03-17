@@ -20,7 +20,7 @@ export default function Home() {
             {/* Testimonials and Clients remain as they are high-level proof points */}
             <Clients />
             <WhyChooseUs />
-            <ScrollReveal><Testimonials /></ScrollReveal>
+            <Testimonials />
         </main>
     );
 }

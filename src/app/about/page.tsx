@@ -77,11 +77,7 @@ export default function AboutPage() {
                         <div className="lg:w-1/2 px-8 pb-8 md:p-0 relative">
                             <div className="relative h-full min-h-[40vh] md:min-h-[60vh] overflow-hidden rounded-2xl md:rounded-none">
                                 <Image
-                                    src={[
-                                        "/images/about_history_new_1772613726539.png",
-                                        "/images/about_facility_new_1772613741689.png",
-                                        "/images/about_artistry_new_1772613759387.png"
-                                    ][idx]}
+                                    src={(item as any).image}
                                     alt={item.title}
                                     fill
                                     className="object-cover"
@@ -151,7 +147,7 @@ export default function AboutPage() {
                                             src={ach.image}
                                             alt={ach.title}
                                             fill
-                                            className="object-cover transition-all duration-1000 group-hover:scale-105"
+                                            className="object-cover object-[50%_15%]"
                                         />
                                         <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors duration-700" />
                                     </div>
@@ -160,7 +156,7 @@ export default function AboutPage() {
                                         <h3 className="text-2xl md:text-4xl font-black text-brand-dark uppercase tracking-tighter leading-tight group-hover:text-brand-accent transition-colors duration-500">
                                             {ach.title}
                                         </h3>
-                                        <p className="section-desc text-lg md:text-xl text-slate-600 leading-relaxed font-serif italic opacity-80 group-hover:opacity-100 transition-opacity">
+                                        <p className="section-desc text-slate-600 leading-relaxed font-serif italic opacity-80 group-hover:opacity-100 transition-opacity">
                                             "{ach.description}"
                                         </p>
                                     </div>
@@ -175,6 +171,9 @@ export default function AboutPage() {
             <EditorialBlock
                 {...editorialSections[0]}
                 bgIvory={true}
+                ctaLabel="Inquire Now"
+                ctaLink="/contact?service=Awards#enquiry"
+                useSectionTitle={true}
             />
         </main>
     );

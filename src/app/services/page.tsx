@@ -50,7 +50,7 @@ export default function ServicesPage() {
             {/* Services Grid (Editorial Style) */}
             <section className="section-padding bg-brand-light">
                 <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-dark border border-brand-dark">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-dark border border-brand-dark">
                         {expertiseData.map((service, idx) => (
                             <EditorialCard
                                 key={service.id}
@@ -89,18 +89,25 @@ export default function ServicesPage() {
                             </ScrollReveal>
                         </div>
 
-                        <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-px bg-brand-dark border border-brand-dark">
+                        <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                             {[
                                 { step: "01", title: "ANALYZE", desc: "Understanding the artistic vision and functional requirements." },
                                 { step: "02", title: "DESIGN", desc: "Precision CAD and prototype development for unique pieces." },
                                 { step: "03", title: "CRAFT", desc: "Meticulous production by our team of skilled artisans." },
                                 { step: "04", title: "DELIVER", desc: "Final quality check and delivery to your space." }
                             ].map((item, idx) => (
-                                <div key={idx} className="p-8 md:p-12 bg-brand-light transition-colors">
+                                <div key={idx} className="p-8 md:p-10 lg:p-12 bg-white rounded-3xl border border-brand-dark/5 shadow-sm hover:shadow-2xl transition-all duration-500 group">
                                     <ScrollReveal delay={idx * 0.1}>
-                                        <span className="text-brand-accent font-black text-xs md:text-sm tracking-widest mb-3 md:mb-4 block">{item.step}</span>
-                                        <h4 className="text-xl md:text-2xl font-black mb-3 md:mb-4 uppercase tracking-tight text-brand-dark">{item.title}</h4>
-                                        <p className="text-slate-600 text-sm md:text-base leading-relaxed">{item.desc}</p>
+                                        <div className="flex justify-between items-start mb-6 md:mb-8">
+                                            <span className="text-brand-accent font-black text-xs md:text-sm tracking-[0.3em] block">{item.step}</span>
+                                            <div className="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center group-hover:bg-brand-accent transition-colors duration-500">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-brand-dark group-hover:bg-white" />
+                                            </div>
+                                        </div>
+                                        <h4 className="text-xl md:text-2xl font-black mb-4 uppercase tracking-tight text-brand-dark group-hover:text-brand-accent transition-colors duration-500">{item.title}</h4>
+                                        <p className="text-slate-600 text-sm md:text-base leading-relaxed italic font-serif">
+                                            "{item.desc}"
+                                        </p>
                                     </ScrollReveal>
                                 </div>
                             ))}
@@ -113,10 +120,14 @@ export default function ServicesPage() {
             <EditorialBlock
                 {...editorialSections[1]}
                 bgIvory={true}
+                ctaLabel="Inquire Now"
+                ctaLink="/contact?service=Household#enquiry"
             />
             <EditorialBlock
                 {...editorialSections[2]}
                 bgIvory={true}
+                ctaLabel="Inquire Now"
+                ctaLink="/contact?service=Interior Design#enquiry"
             />
         </main>
     );

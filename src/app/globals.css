@@ -90,13 +90,17 @@ body {
 }
 
 .section-desc {
-  @apply text-lg md:text-lg lg:text-xl xl:text-2xl leading-relaxed font-serif italic;
+  @apply text-base md:text-base lg:text-lg xl:text-xl leading-relaxed font-serif italic;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
+}
+
+.gallery-item {
+  @apply relative aspect-square;
 }
 
 .editorial-bg-ivory {

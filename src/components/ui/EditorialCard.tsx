@@ -58,7 +58,7 @@ export function EditorialCard({
 
     return (
         <div className={cn(
-            "bg-brand-light p-8 md:p-12 lg:p-16 transition-colors group flex flex-col h-full",
+            "bg-brand-light p-8 md:p-12 lg:p-10 transition-colors group flex flex-col h-full",
             className
         )}>
             <ScrollReveal delay={index * 0.1}>
