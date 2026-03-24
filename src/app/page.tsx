@@ -3,9 +3,7 @@ import { Clients } from "@/components/home/Clients";
 import { Testimonials } from "@/components/home/Testimonials";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { Metadata } from "next";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { editorialSections } from "@/data/homeData";
-import { EditorialBlock } from "@/components/ui/EditorialBlock";
+
 
 export const metadata: Metadata = {
     title: "Crafi Innovations | Artistry in Every Detail",
